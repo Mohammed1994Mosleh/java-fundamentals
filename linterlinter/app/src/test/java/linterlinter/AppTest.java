@@ -7,15 +7,54 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+@Test public void noErrors(){
+    App test=new App();
+    // String testPath = "./src/test/resources/empty.js";
+    int errors=App.check("./src/test/resources/zeroerror.txt");
+
+
+    assertEquals(0,errors);
+}
+
+    @Test public void oneErrors(){
+        App test=new App();
+        // String testPath = "./src/test/resources/empty.js";
+        int errors=App.check("./src/test/resources/oneerror.txt");
+
+
+        assertEquals(1,errors);
     }
 
-    @Test public void checkTest(){
-        App test=new App();
-        int errors=App.check("Test.txt");
 
-        assertEquals(errors,2);
+
+    @Test public void checkTestfewerrors(){
+     App test=new App();
+       // String testPath = "./src/test/resources/empty.js";
+        int errors=App.check("./src/test/resources/Testless.txt");
+        boolean errorsless=errors <= 3;
+
+
+        assertEquals(true,errorsless);
+    }
+
+    @Test public void manyErrors(){
+        App test=new App();
+        // String testPath = "./src/test/resources/empty.js";
+        int errors=App.check("./src/test/resources/manyerrors.txt");
+        boolean errorsless=errors > 3;
+
+
+        assertEquals(true,errorsless);
+    }
+
+    @Test public void emptyFile(){
+        App test=new App();
+        // String testPath = "./src/test/resources/empty.js";
+        int errors=App.check("./src/test/resources/empty.txt");
+
+
+
+        assertEquals(0,errors);
     }
 }
