@@ -17,7 +17,7 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
-        int errors= check("gates.txt");
+        int errors= check("Test.txt");
         System.out.println(errors);
 
     }
@@ -51,6 +51,6 @@ public class App {
         }
 
 
-        return numOferror;
+        return ++numOferror;
     }
 }
