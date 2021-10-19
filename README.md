@@ -29,5 +29,16 @@ Amethod that accepts a List of Strings representing votes and returns one string
 
 3. linterlinter
 contains theis methods:
-- check:
+- Check:
 a method that reads a JavaScript file with a given Path, and generates an error message whenever it finds a line that doesn’t end in a semi-colon.
+
+6. Inheritance and Interfaces:
+##### This Library contains:
+1. Restaurant class .
+
+User can enter new resturant with this propereties (name,star,price),also can add their review of taht resturant .
+   
+2. Review class.
+User can add reviews
+
+3. Test Library :do test on all Methods and classes.
