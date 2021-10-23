@@ -17,7 +17,7 @@ class LibraryTest {
         Restaurant testResturantt=new Restaurant("kabab",5,10);
 
 
-        assertEquals("Restaurant{name='kabab', stars=5, price=10}",testResturantt.toString());
+        assertEquals("kabab{name='kabab', stars=5, price=10}",testResturantt.toString());
     }
 
     @Test
@@ -41,6 +41,52 @@ class LibraryTest {
         macdonalds.addReview("Yousef","bad",4);
         assertEquals(3,macdonalds.stars);
     }
+
+    // Shop test
+
+    @Test
+    public void shoptest() {
+        //add resturanttest
+        Shop macdonalds=new Shop("macdonalds",2,5);
+        assertEquals("macdonalds",macdonalds.name);
+        //reviewtest
+        macdonalds.addReview("Mohammed","good",5);
+        assertEquals(1,macdonalds.listreview.size());
+        //to string test
+        String testTostring="macdonalds{name='macdonalds', stars=5, price=5}Review{author='Mohammed', body='good', numOfstars=5}";
+        assertEquals(testTostring,macdonalds.toString());
+
+        macdonalds.addReview("Ahmed","good",0);
+        macdonalds.addReview("Yousef","bad",4);
+        assertEquals(3,macdonalds.stars);
+    }
+
+    @Test
+    public void theatertest() {
+        //add theater
+        Theater cienema=new Theater("cienema");
+
+        assertEquals("cienema",cienema.name);
+        //addreviewwith name of movie
+        cienema.addReview("mohammed mosleh","its good cienema",4,"shawshankredumption");
+        assertEquals(1,cienema.listreview.size());
+        //add and remove movie
+        cienema.addMovie("ghabi mino fih");
+        boolean includemovie=cienema.allMovies.contains("ghabi mino fih");
+        assertEquals(true,includemovie);
+        cienema.removeMovie("ghabi mino fih");
+        boolean notincludemovie=cienema.allMovies.contains("ghabi mino fih");
+        assertEquals(false,notincludemovie);
+        //tostring test
+
+        System.out.println(cienema.toString());
+        String testTostrig="cienema{name='cienema'}Review{author='mohammed mosleh', body='its good cienema', numOfstars=4}shawshankredumption";
+        assertEquals(testTostrig,cienema.toString());
+
+
+    }
+
+
 
 
 

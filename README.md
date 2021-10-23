@@ -34,11 +34,17 @@ a method that reads a JavaScript file with a given Path, and generates an error 
 
 6. Inheritance and Interfaces:
 ##### This Library contains:
-1. Restaurant class .
+1. Place class.
 
-User can enter new resturant with this propereties (name,star,price),also can add their review of taht resturant .
+2. Restaurant class .
+
+3. Shop class.
+
+* User can enter new Place with this propereties (name,star,price),also can add their review of taht resturant .
    
-2. Review class.
+4. Review class.
 User can add reviews
 
-3. Test Library :do test on all Methods and classes.
+5. Test Library :do test on all Methods and classes.
+
+
