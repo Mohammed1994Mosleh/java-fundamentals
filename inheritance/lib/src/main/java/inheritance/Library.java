@@ -9,26 +9,31 @@ public class Library {
     }
 
     public static void main(String[] args) {
+        Restaurant testResturantt=new Restaurant("kabab",5,10);
+        System.out.println(testResturantt.toString());
+
         System.out.println("Hello");
         Restaurant falafel=new Restaurant("falafel",6,1);
         Restaurant shaWarma=new Restaurant("shaWarma",3,2);
         Restaurant manSaf=new Restaurant("manSaf",4,5);
         falafel.addReview("mohammed","its good resturent",4);
-        falafel.addReview("Doa'a","not bad",2);
-        falafel.addReview("reema","bad",0);
-        falafel.addReview("audai","good",6);
-        //falafel.printReview();
-        Restaurant testResturantt=new Restaurant("kabab",5,10);
-        System.out.println(testResturantt.toString());
+       Shop bookShoop=new Shop("book",4,5);
+        System.out.println(bookShoop.toString());
 
-        System.out.println( falafel.toString());
-        Review testReviw=new Review("Mohammed","good",5);
-        System.out.println(testReviw.toString());
-//        System.out.println( shaWarma.toString());
-//        System.out.println( manSaf.toString());
+        Theater cienema=new Theater("cienema");
+        cienema.addMovie("shawshank redumption");
+        cienema.addMovie("The god father");
+        cienema.removeMovie("shawshank redumption");
+        cienema.displayMovies();
+        cienema.addReview("mohammed mosleh","its good cienema",4,"shawshankredumption");
+        System.out.println(cienema.toString());
+        System.out.println(falafel.toString());
+        cienema.addReview("khader","bad cienema",4);
+        System.out.println(cienema.toString());
 
-      //  Review newReview=new Review("mohammed","its good resturent",5);
-     //   System.out.println(newReview.toString());
+        Shop macdonalds=new Shop("macdonalds",2,5);
+        macdonalds.addReview("Mohammed","good",5);
+        System.out.println(macdonalds.toString());
 
 
     }
